@@ -10,35 +10,44 @@
             {
                 background-color: rgb(233, 233, 233);
             }
-            .imgbox {
 
+            .border
+            {
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
                 align-items: center;
+
+                width: 50%;
+                height: 50%;
+                padding-block: 15%;
+                padding-left: 25%;
+            }
+            .imgbox {
+
+                           
             }
             .center-fit {
                 width: 100%;
-                height: auto;
+                height: auto; 
             }
         </style>
     </head>
     <body>
-    <div class="imgbox" >
-        <a href="index.html">
-            <img class="center-fit" src="assets/backgrounds/rings.png">
-        </a>
-    </div>
+    <div class = "border">
+        <div class="imgbox" >
+            <a href="index.html">
+                <img class = "center-fit" src="assets/backgrounds/rings.png">
+            </a>
 
-    <div class="imgbox" >
-        <a href="index.html">
-            <img class="center-fit" src="assets/backgrounds/rings.png">
-        </a>
-    </div>
+            <a href="index.html">
+                <img class = "center-fit" src="assets/backgrounds/rings.png">
+            </a>
 
-    <div class="imgbox" >
-        <a href="index.html">
-            <img class="center-fit" src="assets/backgrounds/rings.png">
-        </a>
+            <a href="index.html">
+                <img class = "center-fit" src="assets/backgrounds/rings.png">
+            </a>
+        </div>
     </div>
    
 </html>
