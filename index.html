@@ -10,12 +10,55 @@
     <link type="text/css" rel="stylesheet" href="main.css" />
     <style>
       body {
+		font-family: monospace;
+		margin: 0;
         background-color: #f0f0f0;
         color: #444;
       }
       a {
         color: #08f;
       }
+
+	  .windowPane
+	  {
+		display: flex;
+		width: 100%;
+		height:100%;
+		background-color: transparent;
+		position: fixed;
+		z-index: 1;
+		align-items: center;
+		align-content: center;
+		justify-content: center;
+		justify-items: center;
+	  }
+
+	  .dialogBox
+	  {
+		display: block;
+		background-color: white;
+		padding: 2px;
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+		box-sizing: border-box;
+		outline-style: solid;
+		outline-width: 1px;
+		text-indent: 12px;
+	  }
+
+	  .topBox
+	  {
+		text-indent: 0px;
+		display: flex;
+		vertical-align: text-top;
+		border-bottom-style: solid;
+		border-bottom-width: 1px;
+		width: 100%;
+		justify-content: center;
+		align-content: center;
+		height: 45px;
+
+	  }
     </style>
   </head>
   <body>
@@ -58,7 +101,7 @@
 
       // some waves with simplex noise
 
-      var geometry = new THREE.PlaneGeometry(4, 4, 150, 100),
+      var geometry = new THREE.PlaneGeometry(4, 10, 150, 100),
         pos = geometry.getAttribute("position"),
         simplex = new SimplexNoise();
 
@@ -76,7 +119,7 @@
         for (var i = 0; i < pos.count; i++) {
           var x = pos.getX(i),
             y = pos.getY(i),
-            z = 0.5 * simplex.noise3d(x / 2, y / 2, t / 2000);
+            z = 0.5 * simplex.noise3d(x / 2, y / 2, t / 10000);
 
           pos.setZ(i, z);
         }
@@ -86,4 +129,19 @@
       }
     </script>
   </body>
+
+  <div class = "windowPane">
+	<div class = "dialogBox" style="height: 180px; width: 180px;">
+
+		<div class="topBox">
+			<p>capitulate - out now!</p>
+		</div>
+
+		<p><a href = "">apple music </a></p>
+		<p><a href = "">spotify</a></p>
+		<p><a href = "">bandcamp</a></p>
+		<p><a href = "">soundcloud</a></p>
+
+	</div>
+  </div>
 </html>
