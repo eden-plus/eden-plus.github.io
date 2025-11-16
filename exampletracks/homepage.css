@@ -1,0 +1,327 @@
+@font-face {
+        font-family: ArialBlack;
+        src: url("../assets/fonts/Arial\ Black.ttf");
+}
+
+@font-face {
+        font-family: Alliance;
+        src: url("../assets/fonts/font-of-evil.otf");
+}
+
+
+
+
+::selection {
+    background: gray;
+    color: white;
+    text-shadow: none;
+}
+
+::-moz-selection {
+    background: gray;
+    color: white;
+    text-shadow: none;
+}
+
+@media screen and (orientation: landscape)
+{
+
+.main-container
+{
+    align-self: center;
+    justify-self: center;
+    min-width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    height: 100%;
+   
+}
+
+.song-row
+{
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    
+}
+
+
+.song-tile
+{
+    width: 10%;
+    height: 10%;
+    cursor: crosshair;;
+}
+
+.song-tile img 
+{
+    width: 100%;
+    height: 100%;
+}
+
+.song-tile :hover
+{   
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.song-tile:hover .songtooltip
+{
+    display: block;
+    width:auto;
+
+}
+
+.rotated90 { 
+    transform:rotate(36deg); 
+    -webkit-transform:rotate(36deg); 
+    -moz-transform:rotate(36deg); 
+    -o-transform:rotate(36deg); 
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+
+
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover
+{
+    text-decoration: none;
+    color: #FF004D;
+}
+.songtooltip
+{
+    display: none;
+    background: white;
+    position: absolute;
+    z-index: 1000;
+    width: 0px;
+    height:auto;    
+    transition: width 2s; 
+}
+
+.track-title
+{
+    font-family: ArialBlack;
+    font-size: 2vw;
+    letter-spacing: -10%;
+    justify-content: left;
+    text-align: left;
+    padding-left: 5%;
+}
+
+
+.album-title
+{
+    font-family: ArialBlack;
+    font-size: 2vw;
+    letter-spacing: -10%;
+    justify-content: right;
+    text-align: right;
+    color: #FF004D;
+    padding-right: 5%;
+}
+
+.lyrics
+{
+    font-family: Alliance;
+    font-size: 0.8vw;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.lyrics h1
+{
+    font-size: 0.8vw;
+    color: #FF004D;
+    font-weight: normal;
+}
+
+.lyrics mark
+{
+    background-color: #000000;
+    color: white;
+    padding: 2px;
+    font-weight: bold;
+} 
+
+
+.lyrics strong
+{
+    background-color: #FF004D;
+    color: white;
+    padding: 2px;
+} 
+#sac
+{
+    width: 200%;
+    position: fixed;
+    left: -90%;
+    top: -122%;
+}
+
+}
+
+
+
+@media screen and (orientation: portrait)
+{
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover
+{
+    text-decoration: none;
+    color: #FF004D;
+}
+.main-container
+{
+    overflow-y: scroll;
+    background-color: transparent;
+    align-self: center;
+    justify-self: center;
+    min-width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    height: 100%;
+   
+}
+
+.song-row
+{
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    height: 80vh;
+    overflow-y: scroll;
+    
+}
+
+
+.song-tile
+{
+    
+    width: 100%;
+    height: 100%;
+    cursor: crosshair;
+}
+
+.song-tile img 
+{
+    width: 100%;
+    height: 100%;
+}
+
+.song-tile :hover
+{   
+    background-color: white;
+    box-sizing: border-box;
+}
+
+.song-tile:hover .songtooltip
+{
+    display: block;
+    width:auto;
+
+}
+
+.songtooltip
+{
+    display: none;
+    background: white;
+    position: absolute;
+    z-index: 1000;
+    width: 0px;
+    height:auto;    
+    transition: width 2s; 
+}
+
+.track-title
+{
+    padding-top: 10px;
+    font-family: ArialBlack;
+    font-size: 4vw;
+    letter-spacing: -10%;
+    justify-content: left;
+    text-align: left;
+    padding-left: 5%;
+}
+
+
+.album-title
+{
+    font-family: ArialBlack;
+    font-size: 4vw;
+    letter-spacing: -10%;
+    justify-content: right;
+    text-align: right;
+    color: #FF004D;
+    padding-right: 5%;
+    padding-bottom: 20px;
+
+}
+
+.lyrics
+{
+    font-family: Alliance;
+    font-size: 2vw;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: center;
+
+}
+
+.lyrics h1
+{
+    font-size: 2vw;
+    color: #FF004D;
+    font-weight: normal;
+}
+
+.lyrics mark
+{
+    background-color: #000000;
+    color: white;
+    padding: 2px;
+    font-weight: bold;
+} 
+
+
+.lyrics strong
+{
+    background-color: #FF004D;
+    color: white;
+    padding: 2px;
+} 
+#sac
+{
+    width: 200%;
+    position: fixed;
+    left: -90%;
+    top: -122%;
+}
+
+}
