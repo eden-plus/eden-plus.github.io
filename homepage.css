@@ -12,6 +12,8 @@
 body
 {
     overflow: visible;
+    background: white;
+
 }
 
 ::selection {
