@@ -126,6 +126,7 @@ a:hover
     justify-content: left;
     text-align: left;
     padding-left: 5%;
+    transition: all 2s;
 }
 
 
@@ -211,39 +212,45 @@ a:hover
    
 }
 
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.main-container ::-webkit-scrollbar{
+    display: none;
+}
 .song-row
 {
-    display: flex;
-    flex-direction: row;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    display: inline-block;
     align-self: center;
     align-items: center;
     justify-content: center;
-    padding: 5%;
-    height: 80vh;
-    overflow-y: scroll;
+    padding: 22%;
     
+}
+
+
+.song-row::-webkit-scrollbar{
+    display: none;
 }
 
 
 .song-tile
 {
-    
-    width: 100%;
-    height: 100%;
+    display: inline-block;
+    height: 100%;   
     cursor: crosshair;
+    
 }
 
 .song-tile img 
 {
-    width: 100%;
-    height: 100%;
+    max-width: 88%;
 }
 
-.song-tile :hover
-{   
-    background-color: white;
-    box-sizing: border-box;
-}
 
 .song-tile:hover .songtooltip
 {
@@ -272,6 +279,8 @@ a:hover
     justify-content: left;
     text-align: left;
     padding-left: 5%;
+    padding-bottom: 40px;
+
 }
 
 

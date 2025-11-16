@@ -5,8 +5,17 @@ class PlaybackManager
     static isPlaying = false;
     static PlaySong(song, song_tile)
     {
+        
         var audio_player = document.getElementById("audio");
         var title = document.getElementById("track-title");
+        if(this.current_song == song && this.isPlaying)
+        {
+            audio_player.pause();
+            this.isPlaying = false;
+            title.innerHTML = song.song_name + " [chronologically interrupted]";
+
+            return
+        }
         title.innerHTML = song.song_name;
         this.current_song = song;
         console.log(this.current_song);
