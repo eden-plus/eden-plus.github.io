@@ -9,7 +9,10 @@
 }
 
 
-
+body
+{
+    overflow: visible;
+}
 
 ::selection {
     background: gray;
@@ -37,6 +40,8 @@
     justify-content: center;
     position: fixed;
     height: 100%;
+    overflow: visible;
+
    
 }
 
